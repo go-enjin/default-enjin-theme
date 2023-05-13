@@ -1,0 +1,52 @@
+<head>
+    {{- featurePartials "head" "head" }}
+    <title>
+        {{- if .SiteTitleReversed -}}
+            {{- .Title -}}
+            {{- if .SiteInfo.Name -}}
+                {{- if .SiteTitleSeparator }}{{ .SiteTitleSeparator }}{{ else }}: {{ end -}}
+                {{- _ .SiteInfo.Name /* enjin site name (browser tab title) */ -}}
+            {{ end -}}
+        {{- else -}}
+            {{- if .SiteInfo.Name -}}
+                {{- _ .SiteInfo.Name /* enjin site name (browser tab title) */ -}}
+                {{- if .SiteTitleSeparator }}{{ .SiteTitleSeparator }}{{ else }}: {{ end -}}
+            {{ end -}}
+            {{- .Title -}}
+        {{- end -}}
+    </title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="title" content="{{ .Title }}"/>
+    {{- if .Description }}
+    <meta name="description" content="{{ .Description }}"/>
+    {{- end }}
+    {{- if fsExists "/favicon.ico" }}
+    <link href="{{ fsUrl "/favicon.ico" }}" rel="shortcut icon" type="image/x-icon"/>
+    {{- end }}
+    <!-- Google Locales - see: https://developers.google.com/search/blog/2011/12/new-markup-for-multilingual-content -->
+    {{- range $idx,$tag := .SiteInfo.Locales }}
+        {{- with $link := ( __ $tag.String "/err" $.Url ) }}
+            {{- if ne $link "/err" }}
+                <link rel="alternate" hreflang="{{ $tag.String }}" href="{{ $link }}" />
+            {{- end }}
+        {{- end }}
+    {{- end }}
+    {{- if .Canonical }}
+        <link rel="canonical" href="{{ .Canonical }}"/>
+    {{ end -}}
+    {{ if gt (len .Theme.RootStyles) 0 }}
+        <style>
+            :root {
+            {{- range $v := .Theme.RootStyles }}
+            {{ $v -}}
+            {{- end }}
+            }
+        </style>
+    {{ end }}
+    {{ range $url := .Theme.Context.PageStyleSheets }}
+    <link rel="stylesheet" href="{{ if isUrl $url }}{{ $url }}{{ else }}{{ fsUrl $url }}{{ end }}"/>
+    {{- end }}
+    {{- featurePartials "head" "tail" }}
+</head>

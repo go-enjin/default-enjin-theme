@@ -1,0 +1,68 @@
+{
+	"language": "ja",
+	"messages": [
+		{
+			"id": "Search",
+			"key": "Search",
+			"message": "Search",
+			"translation": "Search (ja)",
+			"translatorComment": "main menu search field placeholder text [from: header.tmpl], screen reader only [from: header.tmpl]"
+		},
+		{
+			"id": "Site theme by: %s",
+			"key": "Site theme by: %s",
+			"message": "Site theme by: %s",
+			"translation": "Site theme by: %s (ja)",
+			"translatorComment": "site theme design credit [from: footer.tmpl]"
+		},
+		{
+			"id": "back to top",
+			"key": "back to top",
+			"message": "back to top",
+			"translation": "back to top (ja)",
+			"translatorComment": "screen reader only [from: footer.tmpl]"
+		},
+		{
+			"id": "close main menu",
+			"key": "close main menu",
+			"message": "close main menu",
+			"translation": "close main menu (ja)",
+			"translatorComment": "screen reader only [from: header.tmpl]"
+		},
+		{
+			"id": "close menu",
+			"key": "close menu",
+			"message": "close menu",
+			"translation": "close menu (ja)",
+			"translatorComment": "screen reader only [from: header.tmpl]"
+		},
+		{
+			"id": "close side menu",
+			"key": "close side menu",
+			"message": "close side menu",
+			"translation": "close side menu (ja)",
+			"translatorComment": "screen reader only [from: header.tmpl]"
+		},
+		{
+			"id": "toggle search",
+			"key": "toggle search",
+			"message": "toggle search",
+			"translation": "toggle search (ja)",
+			"translatorComment": "screen reader only, show/hide search menu [from: header.tmpl]"
+		},
+		{
+			"id": "toggle side menu",
+			"key": "toggle side menu",
+			"message": "toggle side menu",
+			"translation": "toggle side menu (ja)",
+			"translatorComment": "screen reader only, show/hide side menu [from: header.tmpl]"
+		},
+		{
+			"id": "top",
+			"key": "top",
+			"message": "top",
+			"translation": "top (ja)",
+			"translatorComment": "[from: baseof.tmpl]"
+		}
+	]
+}
