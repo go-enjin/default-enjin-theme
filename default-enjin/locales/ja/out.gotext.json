@@ -9,20 +9,6 @@
 			"translatorComment": "main menu search field placeholder text [from: header.tmpl], screen reader only [from: header.tmpl]"
 		},
 		{
-			"id": "Site theme by: %s",
-			"key": "Site theme by: %s",
-			"message": "Site theme by: %s",
-			"translation": "Site theme by: %s (ja)",
-			"translatorComment": "site theme design credit [from: footer.tmpl]"
-		},
-		{
-			"id": "back to top",
-			"key": "back to top",
-			"message": "back to top",
-			"translation": "back to top (ja)",
-			"translatorComment": "screen reader only [from: footer.tmpl]"
-		},
-		{
 			"id": "close main menu",
 			"key": "close main menu",
 			"message": "close main menu",
