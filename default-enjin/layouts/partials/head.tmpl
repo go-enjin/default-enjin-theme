@@ -18,6 +18,9 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {{- range $idx,$tag := .HtmlHeadTags }}
+        {{ $tag }}
+    {{- end }}
     <meta name="title" content="{{ .Title }}"/>
     {{- if .Description }}
     <meta name="description" content="{{ .Description }}"/>
@@ -48,5 +51,6 @@
     {{ range $url := .Theme.Context.PageStyleSheets }}
     <link rel="stylesheet" href="{{ if isUrl $url }}{{ $url }}{{ else }}{{ fsUrl $url }}{{ end }}"/>
     {{- end }}
+
     {{- featurePartials "head" "tail" }}
 </head>
