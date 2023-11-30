@@ -23,7 +23,6 @@ import (
 )
 
 //go:embed default-enjin/**
-//go:embed default-enjin/layouts/_default/**
 var themeFS embed.FS
 
 func Theme() themes.Feature {
